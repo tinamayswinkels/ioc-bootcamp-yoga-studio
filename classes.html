@@ -1,12 +1,13 @@
 ---
 layout: default
-indented-banner: true
-background-position: bg-[position:50%_16%]
-banner-image: /images/yoga-3.jpg
-sub-heading: Welcome to
-heading: The Yoga Studio 
-about-image: /images/yoga-2.jpg
-classes-image: /images/yoga-3.jpg
+banner: 
+    indented-banner: true
+    background-position: bg-[position:50%_16%]
+    banner-image: /images/yoga-3.jpg
+    sub-heading: Yoga & Pilates
+    heading: Our Classes 
+section-one-image: /images/yoga-7.jpg
+section-two-image: /images/yoga-5.jpg
 classes: 
     - name: Bikram Hot Yoga
       description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
@@ -17,6 +18,15 @@ classes:
     - name: Chakra Flow
       description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
       image: /images/yoga-8.jpg
+    - name: Bikram Hot Yoga
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      image: /images/yoga-1.jpg
+    - name: Mandala Yoga
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      image: /images/yoga-2.jpg
+    - name: Chakra Flow
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      image: /images/yoga-3.jpg
 ---
 
 
@@ -28,7 +38,7 @@ classes:
         <!-- First line is the mobile styles, second line is the desktop styles -->
         <div class="md:grid md:grid-cols-3 md:gap-6 md:overflow-x-hidden">
             
-            {% for class in page.classes limit:3 %}
+            {% for class in page.classes limit:6 %}
 
             <div class="text-center
                         md:w-auto md:col-span-1">
@@ -46,6 +56,36 @@ classes:
 
         </div>
 
+    </div>
+
+</section>
+
+<section class="border-y-2">
+    <div class="md:grid grid-cols-2 min-h-80 gap-[1px] bg-light">
+        <div class="p-[5vw] self-end">
+            <h2 class=""> Instructors with heart </h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet expedita sapiente maiores dolores laudantium, perspiciatis, fuga delectus eos repudiandae tenetur velit iusto quo officia culpa quasi explicabo ipsam atque consequatur!</p>
+
+        </div>
+        <div class="md:border-l-2 bg-cover bg-center pb-[75%] m-[5vw] md:m-0" style="background-image: url('{{page.section-one-image}}');">
+            
+        </div>
+    </div>
+
+</section>
+
+<section class="border-y-2">
+    <div class="md:grid grid-cols-2 min-h-80 gap-[1px] bg-light">
+        <div class="p-[5vw] self-end md:order-2">
+            <h2 class=""> A community you'll love </h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet expedita sapiente maiores dolores laudantium, perspiciatis, fuga delectus eos repudiandae tenetur velit iusto quo officia culpa quasi explicabo ipsam atque consequatur!</p>
+
+        </div>
+        <div class="md:border-l-2 bg-cover bg-center pb-[75%] m-[5vw] md:m-0" style="background-image: url('{{page.section-two-image}}');">
+            
+        </div>
     </div>
 
 </section>

@@ -40,9 +40,6 @@ module.exports = {
           '60': '60vh',
           '50': '50vh',
         },
-        screens: {
-            '3xl': '2000px',
-        },
       },
     },
     plugins: [

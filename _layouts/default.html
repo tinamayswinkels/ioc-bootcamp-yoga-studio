@@ -17,12 +17,12 @@
 <body>
 
 
-<header class="md:absolute top-0 left-0 right-0 md:flex justify-between py-4 px-5p text-center md:text-left">
+<header class="md:absolute top-0 left-0 right-0 md:flex justify-between py-4 px-5p text-center md:text-left max-w-screen-2xl mx-auto">
         <h2 class="mb-0 text-2xl"> 
             <a href="/"> The Yoga Studio </a> 
         </h2>
         <nav class="py-4 md:p-0"> 
-            <a href="/our-classes"> Our Classes </a>
+            <a href="/classes"> Our Classes </a>
             <a href="/schedule"> Schedule </a>
             <a href="contact" class="pr-0"> Contact </a>
         </nav>
@@ -30,17 +30,17 @@
 
 <section class="border-b-2">
 
-    <div class="{{page.background-position}} bg-cover max-w-screen-3xl mx-auto px-5p
-                {% if page.indented-banner == true %} ml-[30vw] {% endif %}"
-        style="background-image: url('{{page.banner-image}}');"> 
+    <div class="{{page.banner.background-position}} bg-cover max-w-screen-2xl mx-auto px-5p
+                {% if page.banner.indented-banner == true %} ml-[30vw] {% endif %}"
+        style="background-image: url('{{page.banner.banner-image}}');"> 
     
         <div class=" min-h-90 flex items-center">
-            <div class="{% if page.indented-banner == true %} -ml-[30vw] {% endif %}"> 
+            <div class="{% if page.banner.indented-banner == true %} -ml-[30vw] {% endif %}"> 
                 <hr class="border-t-2  mb-4 -ml-[5vw] w-[60%]">
-                {% if page.sub-heading %} 
-                <h2 class="text-base uppercase tracking-widest font-sans"> {{page.sub-heading}} </h2>
+                {% if page.banner.sub-heading %} 
+                <h2 class="text-base uppercase tracking-widest font-sans"> {{page.banner.sub-heading}} </h2>
                 {% endif %}
-                <h1 class="mb-0 text-6xl"> {{page.heading}}</h1>
+                <h1 class="mb-0 text-6xl"> {{page.banner.heading}}</h1>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
 
 
 <footer class="p-5p bg-copper text-light border-b-2 border-light">
-    <div class="grid md:grid-cols-10 max-w-screen-xl gap-8">
+    <div class="grid md:grid-cols-10 max-w-screen-2xl mx-auto gap-8">
             <div class="col-span-3">
                 <h4 class="uppercase text-xl"> The Yoga Studio </h4>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam, dolore veritatis ipsum doloremque commodi inventore.</p>
@@ -85,7 +85,9 @@
     </div>
 
 </footer>
-
+<div class="sub-footer">
+    <p> © Copyright 2023. Website design by <a href="https://www.kelapacreative.com"> Kelapa Creative</a> 
+</div>
 
 
 </body>
