@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Poppins 200,300, 400 500 normal & italic  -->
+    <!-- Montserrat 400, 700 normal & italic  -->
+    <!-- Poppins 200,300, 400 500 normal & italic  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oranienbaum&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link href="/assets/css/output-style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<header class="md:absolute top-0 left-0 right-0 md:flex justify-between py-4 px-5p text-center md:text-left">
+        <h2 class="mb-0 text-2xl"> 
+            <a href="/"> The Yoga Studio </a> 
+        </h2>
+        <nav class="py-4 md:p-0"> 
+            <a href="/our-classes"> Our Classes </a>
+            <a href="/schedule"> Schedule </a>
+            <a href="contact" class="pr-0"> Contact </a>
+        </nav>
+</header>
+
+<section class="border-b-2">
+
+    <div class="{{page.background-position}} bg-cover max-w-screen-3xl mx-auto px-5p
+                {% if page.indented-banner == true %} ml-[30vw] {% endif %}"
+        style="background-image: url('{{page.banner-image}}');"> 
+    
+        <div class=" min-h-90 flex items-center">
+            <div class="{% if page.indented-banner == true %} -ml-[30vw] {% endif %}"> 
+                <hr class="border-t-2  mb-4 -ml-[5vw] w-[60%]">
+                {% if page.sub-heading %} 
+                <h2 class="text-base uppercase tracking-widest font-sans"> {{page.sub-heading}} </h2>
+                {% endif %}
+                <h1 class="mb-0 text-6xl"> {{page.heading}}</h1>
+            </div>
+        </div>
+
+    </div>
+
+</section> 
+
+{{ content }}
+
+
+<footer class="p-5p bg-copper text-light border-b-2 border-light">
+    <div class="grid md:grid-cols-10 max-w-screen-xl gap-8">
+            <div class="col-span-3">
+                <h4 class="uppercase text-xl"> The Yoga Studio </h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam, dolore veritatis ipsum doloremque commodi inventore.</p>
+                
+            </div>
+            <div class="col-span-2">
+            <h4 class="uppercase text-xl"> Explore </h4>
+                <nav>
+                    <a href="#" class="block"> This is a link </a>
+                    <a href="#" class="block"> This is a link </a>
+                    <a href="#" class="block"> This is a link </a>
+                </nav>
+            </div>
+            <div class="col-span-2">
+                <h4 class="uppercase text-xl"> Socials </h4>
+                <nav>
+                    <a href="#" class="block"> This is a link </a>
+                    <a href="#" class="block"> This is a link </a>
+                    <a href="#" class="block"> This is a link </a>
+                </nav>
+
+            </div>
+            <div class="col-span-3 text-right">
+                <h4 class="uppercase text-xl"> Subscribe to our newsletter </h4>
+                <form>
+                <input type="text" class="block bg-copper border border-light mb-2 w-full p-1"> </input> 
+                <input type="submit" class="button bg-light text-copper" value="Subscribe">
+                </form>
+            </div>
+    </div>
+
+</footer>
+
+
+
+</body>

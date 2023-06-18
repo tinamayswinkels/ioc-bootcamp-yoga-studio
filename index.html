@@ -1,0 +1,109 @@
+---
+layout: default
+indented-banner: true
+background-position: bg-center
+banner-image: /images/yoga-1.jpg
+sub-heading: Welcome to
+heading: The Yoga Studio 
+about-image: /images/yoga-2.jpg
+classes-image: /images/yoga-3.jpg
+classes: 
+    - title: Bikram Hot Yoga
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+    - title: Mandala Yoga
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+    - title: Chakra Flow
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+    - title: Vinyasa Flow
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+testimonials:
+    - name: Joe Smith
+      image: /images/yoga-4.jpg
+      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
+    - name: Lucy Lu
+      image: /images/yoga-4.jpg
+      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
+    - name: Vika Kadek
+      image: /images/yoga-4.jpg
+      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
+---
+
+
+<section class="border-b-2">
+    <div class="md:grid grid-cols-2 min-h-80 gap-[1px] bg-light">
+        <div class="p-[5vw] self-end">
+            <h2 class=""> A studio just for you. </h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+        
+            <a class="button mt-2" href="/classes"> Sign up </a>
+
+        </div>
+        <div class="md:border-l-2 bg-cover bg-center pb-[75%] m-[5vw] md:m-0" style="background-image: url('{{page.about-image}}');">
+            
+        </div>
+    </div>
+
+</section>
+
+<section class="">
+    <div class="md:grid grid-cols-2 min-h-70 max-w-screen-xl mx-auto border-b-2">
+
+        <div class="md:border-l-2 bg-cover bg-center md:m-0 bg-[url('{{page.classes-image}}')] bg-black/70 bg-blend-overlay md:bg-blend-normal flex min-h-80">
+            <div class="p-[5vw] text-light self-end">
+                <h2 class=""> Our Classes. </h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+            
+                <a class="button mt-2" href="/classes"> Sign up </a>
+
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border-l-2 gap-[2px] bg-copper">
+
+
+            {% for item in page.classes %}
+
+            <div class="col-span-1 p-4 flex bg-light">
+                
+                <div class="self-end ">
+                    <h3> {{item.title}} </h3>
+                    <p class="line-clamp-3"> {{item.description}} </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+
+</section>
+
+
+<section class="py-5p md:p-5p bg-light">
+
+    <div class="max-w-screen-lg mx-auto">
+        <div class="px-5p md:px-0">
+            <h2> Testimonials </h2>
+        </div>
+
+        <!-- First line is the mobile styles, second line is the desktop styles -->
+        <div class="px-5p overflow-x-scroll flex flex-nowrap  
+                    md:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-hidden">
+            
+            {% for person in page.testimonials limit:3 %}
+
+            <div class="w-4/5 flex-shrink-0 text-center mr-4
+                        md:w-auto md:col-span-1 md:mr-0">
+                <div class="aspect-square relative border-2">
+                    <img class="object-cover absolute inset-0 h-full w-full" src="{{person.image}}">
+                </div>
+                <h4 class="p-4 border-b-2 text-2xl"> {{person.name}}</h4>
+                <p class="line-clamp-3"> {{person.description}}</p>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

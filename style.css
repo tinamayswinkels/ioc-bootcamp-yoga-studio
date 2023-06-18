@@ -1,0 +1,122 @@
+/* ----------- Import Tailwind -----*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ----------- Default Styles to apply to the whole project  --------- */
+
+@layer base {
+
+    html {
+        /* @apply border-8 sm:border-blue md:border-purple lg:border-teal; */
+    }
+
+    div, nav {
+        /* border: 1px solid white; */
+    }
+
+    body {
+        @apply text-copper bg-light ;
+    }
+
+    h1, h2, h3, h4  {
+        @apply font-serif mb-[0.5em];
+    }
+
+    h1 {
+        @apply text-3xl leading-tight;
+    }
+
+    h2 {
+        @apply text-3xl tracking-tight;
+    }
+    h3 {
+        @apply text-2xl tracking-tight;
+    }
+
+    p {
+        @apply mb-[0.5em] leading-normal font-light text-sm;
+    }
+
+    nav a {
+        @apply tracking-wider uppercase pr-4 font-light;
+    }
+
+
+}
+
+
+/* ----------- ADDITIONAL COMPONENTS  --------- */
+
+@layer components {
+
+
+    .button  {
+        @apply inline-block px-6 py-2 uppercase tracking-wide bg-copper text-light;
+    }
+
+}
+
+
+/* Background  */
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule {
+    @apply bg-light;
+}
+
+/* Background  */
+#momence-embed #momence-plugin-host-schedule * {
+    @apply bg-light text-copper font-sans font-light rounded-none border-copper;
+}
+
+/* Styling the headings  */
+#momence-embed #momence-plugin-host-schedule h4 {
+    @apply text-copper font-serif;
+}
+
+/* Hide the class type text above the class title */
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule-session_list-item-type {
+    display: none;
+}
+
+/* Hide featured image */
+#momence-embed #momence-plugin-host-schedule .jDJBAl {
+    display: none;
+}
+
+/* Teacher Name & Bio */
+#momence-embed #momence-plugin-host-schedule .momence-session-teacher {
+    display: none;
+}
+
+/* Style the featured button  */
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule-session_list-item-booked_button {
+    @apply inline-block px-6 py-2 uppercase tracking-wide bg-copper text-light rounded-none whitespace-nowrap;
+}
+
+/* Remove the border from the arrows left and right at the top  */
+#momence-embed #momence-plugin-host-schedule .momence-arrow-button {
+    @apply border-none;
+}
+
+/* Add more space below the first row  */
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule-first_row {
+    @apply pb-4;
+}
+
+
+/* Add more space below the first row  */
+#momence-embed #momence-plugin-host-schedule .momence-event_type_select-button {
+    @apply text-2xl font-serif pointer-events-none;
+}
+
+/* Hide powered by momence */
+
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule-powered_by_momence {
+    display: none;
+}
+
+/* Styling the lines under the list of pages */
+#momence-embed #momence-plugin-host-schedule .gZOyVg::after {
+    @apply bg-copper;
+}
