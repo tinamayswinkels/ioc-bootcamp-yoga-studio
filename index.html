@@ -10,31 +10,31 @@ about-image: /images/yoga-2.jpg
 classes-image: /images/yoga-3.jpg
 classes: 
     - title: Bikram Hot Yoga
-      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      description: Experience transformative heat and deep healing as you flow through intense poses in a headed room. 
     - title: Mandala Yoga
-      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      description: Flow through fluid asanas, breathwork, and mindful transitions for a graceful and rhythmic practice. 
     - title: Chakra Flow
-      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      description: Immerse yourself in our dynamic Chakra Flow classes, blending yoga asanas and energetic alignment. 
     - title: Vinyasa Flow
-      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit magnam tempora ut voluptate blanditiis.
+      description: Discover the graceful dance of breath and movement in our Vinyasa Flow classes.
 testimonials:
-    - name: Joe Smith
+    - name: Sarah James
       image: /images/yoga-4.jpg
-      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
+      description: "Attending classes at this yoga studio has truly transformed my life. The instructors radiate genuine passion and guide us with patience and expertise. The sense of community and support is remarkable, making each practice a transformative and uplifting experience."
     - name: Lucy Lu
-      image: /images/yoga-4.jpg
-      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
-    - name: Vika Kadek
-      image: /images/yoga-4.jpg
-      description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum doloremque facilis voluptate? Quidem ullam necessitatibus dolorum reprehenderit harum tenetur dicta sint accusantium facere tempore, recusandae magni expedita earum soluta at.
+      image: /images/yoga-5.jpg
+      description: "As a beginner, I was initially hesitant to try yoga, but this studio instantly made me feel at ease. The welcoming atmosphere and individualized attention helped me build confidence and embrace the journey of self-discovery. It's been amazing for my physical and mental well-being."
+    - name: Emma May
+      image: /images/yoga-6.jpg
+      description: "I have practiced yoga for years, but the diversity of classes offered at this studio continues to inspire and challenge me. From the invigorating Vinyasa Flow to the soul-stirring Chakra Flow, each session takes me on a unique voyage of self-exploration."
 ---
 
 
 <section class="border-b-2">
-    <div class="md:grid grid-cols-2 min-h-80 gap-[1px] bg-light">
+    <div class="md:grid grid-cols-2 min-h-80 gap-[1px] bg-light max-w-screen-2xl mx-auto">
         <div class="p-[5vw] self-end">
             <h2 class=""> A studio just for you. </h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+            <p> Welcome to our serene oasis, where tranquility and self-discovery harmonize. Our yoga studio is a sanctuary for those seeking balance, strength, and mindfulness. With expert instructors, a nurturing community, and a diverse range of classes, we invite you to embark on a transformative journey towards holistic well-being.</p>
         
             <a class="button mt-2" href="/classes"> Sign up </a>
 
@@ -47,19 +47,19 @@ testimonials:
 </section>
 
 <section class="">
-    <div class="md:grid grid-cols-2 min-h-70 max-w-screen-xl mx-auto border-b-2">
+    <div class="md:grid grid-cols-2 min-h-70 max-w-screen-2xl mx-auto border-b-2">
 
         <div class="md:border-l-2 bg-cover bg-center md:m-0 bg-[url('{{page.classes-image}}')] bg-black/70 bg-blend-overlay md:bg-blend-normal flex min-h-80">
             <div class="p-[5vw] text-light self-end">
                 <h2 class=""> Our Classes. </h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora ut voluptate blanditiis nulla repellendus ea tenetur sequi fugiat doloribus aliquam laboriosam at, autem qui ex, officia quidem, natus veniam.</p>
+                <p> Ignite your inner flame and nourish your body, mind, and soul through our thoughtfully curated classes. Our yoga sessions cater to all levels, from beginners to advanced practitioners, ensuring a personalized experience that meets you exactly where you are. </p>
             
                 <a class="button mt-2" href="/classes"> Explore all </a>
 
             </div>
         </div>
 
-        <div class="grid grid-cols-2 border-l-2 gap-[2px] bg-copper">
+        <div class="grid sm:grid-cols-2 border-l-2 gap-[2px] bg-copper">
 
 
             {% for item in page.classes %}
@@ -81,14 +81,14 @@ testimonials:
 
 <section class="py-5p md:p-5p bg-light">
 
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-2xl mx-auto">
         <div class="px-5p md:px-0">
             <h2> Testimonials </h2>
         </div>
 
         <!-- First line is the mobile styles, second line is the desktop styles -->
-        <div class="px-5p overflow-x-scroll flex flex-nowrap  
-                    md:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-hidden">
+        <div class="px-5p pb-8 overflow-x-scroll flex flex-nowrap  
+                    md:p-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-hidden">
             
             {% for person in page.testimonials limit:3 %}
 
@@ -98,7 +98,7 @@ testimonials:
                     <img class="object-cover absolute inset-0 h-full w-full" src="{{person.image}}">
                 </div>
                 <h4 class="p-4 border-b-2 text-2xl"> {{person.name}}</h4>
-                <p class="line-clamp-3"> {{person.description}}</p>
+                <p class=""> "{{person.description}}"</p>
             </div>
 
             {% endfor %}

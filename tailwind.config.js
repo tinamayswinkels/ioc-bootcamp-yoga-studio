@@ -14,12 +14,16 @@ module.exports = {
       colors: {
         'white': '#ffffff',
         'black': 'black',
+        'copper-dark': '#b46720',
         'copper': '#C97324',
+        'copper-light': '#dc8c42',
         'light': '#FBF2E9', 
         'blue': 'blue',
         'purple': 'purple',
         'teal': 'teal'
-
+      },
+      outline: {
+        DEFAULT: '1px',
       },
       extend: {
         spacing: {

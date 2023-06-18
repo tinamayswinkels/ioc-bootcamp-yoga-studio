@@ -28,7 +28,7 @@
         </nav>
 </header>
 
-<section class="border-b-2">
+<section class="outline">
 
     <div class="{{page.banner.background-position}} bg-cover max-w-screen-2xl mx-auto px-5p
                 {% if page.banner.indented-banner == true %} ml-[30vw] {% endif %}"
@@ -38,7 +38,9 @@
             <div class="{% if page.banner.indented-banner == true %} -ml-[30vw] {% endif %}"> 
                 <hr class="border-t-2  mb-4 -ml-[5vw] w-[60%]">
                 {% if page.banner.sub-heading %} 
-                <h2 class="text-base uppercase tracking-widest font-sans"> {{page.banner.sub-heading}} </h2>
+                <h2 class="text-base uppercase tracking-widest font-sans"> 
+                    {{page.banner.sub-heading}} 
+                </h2>
                 {% endif %}
                 <h1 class="mb-0 text-6xl"> {{page.banner.heading}}</h1>
             </div>
@@ -51,11 +53,11 @@
 {{ content }}
 
 
-<footer class="p-5p bg-copper text-light border-b-2 border-light">
+<footer class="p-5p bg-copper text-light border-b border-light">
     <div class="grid md:grid-cols-10 max-w-screen-2xl mx-auto gap-8">
             <div class="col-span-3">
                 <h4 class="uppercase text-xl"> The Yoga Studio </h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam, dolore veritatis ipsum doloremque commodi inventore.</p>
+                <p> A heart-centered yoga studio in downtown Canggu, offering a sanctuary for holistic well-being and self-discovery. </p>
                 
             </div>
             <div class="col-span-2">
@@ -78,14 +80,14 @@
             <div class="col-span-3 text-right">
                 <h4 class="uppercase text-xl"> Subscribe to our newsletter </h4>
                 <form>
-                <input type="text" class="block bg-copper border border-light mb-2 w-full p-1"> </input> 
+                <input type="text" class="block bg-copper border border-light mb-2 w-full p-1 placeholder:text-copper-light placeholder:font-serif" placeholder="Your Email"> </input> 
                 <input type="submit" class="button bg-light text-copper" value="Subscribe">
                 </form>
             </div>
     </div>
 
 </footer>
-<div class="sub-footer">
+<div class="sub-footer bg-copper p-4 text-center">
     <p> © Copyright 2023. Website design by <a href="https://www.kelapacreative.com"> Kelapa Creative</a> 
 </div>
 

@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 
+
 /* ----------- Default Styles to apply to the whole project  --------- */
 
 @layer base {
@@ -17,8 +18,9 @@
     }
 
     body {
-        @apply text-copper bg-light ;
+        @apply text-copper bg-light selection:bg-copper-light selection:text-light;
     }
+
 
     h1, h2, h3, h4  {
         @apply font-serif mb-[0.5em];
@@ -41,6 +43,10 @@
 
     nav a {
         @apply tracking-wider uppercase pr-4 font-light;
+    }
+
+    .outline {
+        @apply outline-2;
     }
 
 
